@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfd219d5-1532-4236-910c-a4b3f7aaf8b9" name="Changes" comment="first commmit" />
+    <list default="true" id="dfd219d5-1532-4236-910c-a4b3f7aaf8b9" name="Changes" comment="first commmit">
+      <change afterPath="$PROJECT_DIR$/apiCommunication/bahn/BahnApi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/bahn/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/Doorbell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.caffemodel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.prototxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/CameraFeed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/VideoOutput.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/VideoStreamConnection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/centroidtracker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/notification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/trackableobject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/videos/example_01.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,24 +44,56 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IHGNQbuTDjj0o0jntxgRd9BBYY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/felixriemen/PycharmProjects/RaspberryDeployment"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/felixriemen/PycharmProjects/RaspberryDeployment/apiCommunication/doorbell&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apiCommunication/doorbell" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RaspberryDeployment" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.server" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669831055031</updated>
       <workItem from="1669831056976" duration="594000" />
+      <workItem from="1669831663171" duration="3186000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1669831352548</created>
@@ -62,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669831352549</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commmit">
+      <created>1669831703156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669831703156</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +142,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commmit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RaspberryDeployment$server.coverage" NAME="server Coverage Results" MODIFIED="1669831252333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/RaspberryDeployment$server.coverage" NAME="server Coverage Results" MODIFIED="1669832205099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
