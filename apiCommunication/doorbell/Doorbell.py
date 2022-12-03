@@ -1,7 +1,7 @@
 import csv
 import cv2
 import datetime
-import dlib
+#import dlib
 import time
 from itertools import zip_longest
 
@@ -14,7 +14,6 @@ from mylib.centroidtracker import CentroidTracker
 from mylib.notification import Notification
 from mylib.trackableobject import TrackableObject
 from mylib.VideoStreamConnection import VideoStreamConnection
-
 
 
 # --prototxt mobilenet_ssd/MobileNetSSD_deploy.prototxt --model mobilenet_ssd/MobileNetSSD_deploy.caffemodel
@@ -59,8 +58,7 @@ class DoorBell:
         #    vs = thread.ThreadingClass(config.url)
         frameWidth = None
         frameHeight = None
-        temp = VideoStreamConnection(True).connectCamera()
-
+        temp = VideoStreamConnection(self.cameraStreamAvailable).connectCamera()
 
         while True:
             # gets Vidstream
@@ -158,11 +156,13 @@ class DoorBell:
             ]
             for (i, (k, v)) in enumerate(info):
                 text = "{}: {}".format(k, v)
-                cv2.putText(frame, text, (10, frameHeight - ((i * 20) + 20)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
+                cv2.putText(frame, text, (10, frameHeight - ((i * 20) + 20)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0),
+                            2)
 
             for (i, (k, v)) in enumerate(info2):
                 text = "{}: {}".format(k, v)
-                cv2.putText(frame, text, (265, frameHeight - ((i * 20) + 60)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                cv2.putText(frame, text, (265, frameHeight - ((i * 20) + 60)), cv2.FONT_HERSHEY_SIMPLEX, 0.6,
+                            (255, 255, 255), 2)
             if config.Log:
                 datetimee = [datetime.datetime.now()]
                 d = [datetimee, self.empty1, self.empty, x]
@@ -190,6 +190,7 @@ class DoorBell:
     def run(self):
         self.loadModel()
         self.startFPS()
+
 
 D = DoorBell()
 D.run()

@@ -10,6 +10,7 @@ import time
 import datetime
 from opencage.geocoder import OpenCageGeocode as geocoder
 from apiCommunication.bahn.BahnApi import BahnApi
+from apiCommunication.doorbell import Doorbell
 
 
 class Server(object):
@@ -36,6 +37,15 @@ class Server(object):
         self.clients.append(clientsocket)
         # self.clientanzahl = self.clientanzahl + 1
         self.process_new_connection(clientsocket)
+
+    def startDoorBell(self, clientsocket):
+        thread = threading.Thread(target=self.doorBellConnection(clientsocket))
+        thread.start()
+
+    def doorBellConnection(self, clientsocket):
+        if Doorbell.DoorBell().run():
+            self.send_data(clientsocket, "door")
+        self.doorBellConnection(clientsocket)
 
     def _connection_handler(self, clientsocket):
         data_buffer = ""

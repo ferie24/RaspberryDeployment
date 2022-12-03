@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfd219d5-1532-4236-910c-a4b3f7aaf8b9" name="Changes" comment="first commmit">
-      <change afterPath="$PROJECT_DIR$/apiCommunication/bahn/BahnApi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/bahn/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/Doorbell.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.caffemodel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.prototxt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/CameraFeed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/VideoOutput.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/VideoStreamConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/centroidtracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/notification.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/mylib/trackableobject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiCommunication/doorbell/videos/example_01.mp4" afterDir="false" />
+    <list default="true" id="dfd219d5-1532-4236-910c-a4b3f7aaf8b9" name="Changes" comment="BahnApi-Reworked, Doorbell Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiCommunication/doorbell/Doorbell.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiCommunication/doorbell/Doorbell.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,14 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/felixriemen/PycharmProjects/RaspberryDeployment/apiCommunication/doorbell&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/felixriemen/PycharmProjects/RaspberryDeployment/apiCommunication/doorbell",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apiCommunication/doorbell" />
@@ -66,7 +61,29 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Doorbell">
+    <configuration name="Doorbell" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RaspberryDeployment" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apiCommunication/doorbell" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apiCommunication/doorbell/Doorbell.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RaspberryDeployment" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Doorbell" />
         <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
@@ -105,6 +123,8 @@
       <updated>1669831055031</updated>
       <workItem from="1669831056976" duration="594000" />
       <workItem from="1669831663171" duration="3186000" />
+      <workItem from="1669884513381" duration="354000" />
+      <workItem from="1670058224742" duration="2397000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1669831352548</created>
@@ -120,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669831703156</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BahnApi-Reworked, Doorbell Added">
+      <created>1669884562087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669884562087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,9 +166,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commmit" />
+    <MESSAGE value="BahnApi-Reworked, Doorbell Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="BahnApi-Reworked, Doorbell Added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RaspberryDeployment$server.coverage" NAME="server Coverage Results" MODIFIED="1669832205099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RaspberryDeployment$Doorbell.coverage" NAME="Doorbell Coverage Results" MODIFIED="1670061470359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apiCommunication/doorbell" />
+    <SUITE FILE_PATH="coverage/RaspberryDeployment$server.coverage" NAME="server Coverage Results" MODIFIED="1670061099487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
