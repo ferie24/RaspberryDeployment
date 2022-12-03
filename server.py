@@ -23,7 +23,7 @@ class Server(object):
         self.clientanzahl = 0
         self.real = False
 
-    def start(self):
+    def starts(self):
         print("Server laeuft! Mit Strg+C Server stoppen!")
         while True:
             clientsocket, (host, port) = self.socket.accept()
@@ -44,7 +44,10 @@ class Server(object):
 
     def doorBellConnection(self, clientsocket):
         if Doorbell.DoorBell().run():
+            print("INFO - Sending Command someone is at The Door")
+
             self.send_data(clientsocket, "door")
+
         self.doorBellConnection(clientsocket)
 
     def _connection_handler(self, clientsocket):
@@ -116,8 +119,6 @@ class Server(object):
             print("Verbindungsaufbau mit " + local_ip + ", um: " + time_now)
 
 
-
-
 class Weather():
     def init(self, lat, lon):
         key = "4cf6fec3a220ac5699c371800f684535"
@@ -164,4 +165,4 @@ class Weather():
 
 if __name__ == '__main__':
     server = Server()
-    server.start()
+    server.starts()

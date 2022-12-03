@@ -1,7 +1,7 @@
 import csv
 import cv2
 import datetime
-#import dlib
+import dlib
 import time
 from itertools import zip_longest
 
@@ -9,11 +9,11 @@ import imutils
 import numpy as np
 from imutils.video import FPS
 
-from mylib import config
-from mylib.centroidtracker import CentroidTracker
-from mylib.notification import Notification
-from mylib.trackableobject import TrackableObject
-from mylib.VideoStreamConnection import VideoStreamConnection
+from apiCommunication.doorbell.config import config
+from apiCommunication.doorbell.centroidtracker import CentroidTracker
+from apiCommunication.doorbell.notification import Notification
+from apiCommunication.doorbell.trackableobject import TrackableObject
+from apiCommunication.doorbell.VideoStreamConnection import VideoStreamConnection
 
 
 # --prototxt mobilenet_ssd/MobileNetSSD_deploy.prototxt --model mobilenet_ssd/MobileNetSSD_deploy.caffemodel
@@ -23,8 +23,8 @@ class DoorBell:
         self.t0 = time.time()
         self.rgb = None
         self.fps = None
-        self.pathToCaffeProtoTxt = "mobilenet_ssd/MobileNetSSD_deploy.prototxt"
-        self.pathToModel = "mobilenet_ssd/MobileNetSSD_deploy.caffemodel"
+        self.pathToCaffeProtoTxt = "apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.prototxt"
+        self.pathToModel = "apiCommunication/doorbell/mobilenet_ssd/MobileNetSSD_deploy.caffemodel"
         self.confidence = 0.4  # default
         self.skipFrames = 15
         self.classes = ["background", "aeroplane", "bicycle", "bird", "boat",
@@ -85,7 +85,7 @@ class DoorBell:
 
                         idx = int(detections[0, 0, i, 1])
 
-                        if self.classes[idx] != "person":
+                        if self.classes[idx] != "person" or self.classes[idx] != "car":
                             continue
 
                         box = detections[0, 0, i, 3:7] * np.array(
@@ -125,6 +125,7 @@ class DoorBell:
                             self.totalUp += 1
                             self.empty.append(self.totalUp)
                             trackableObject.counted = True
+                            return True
                             Notification().notify("Kekse", "Kekse")
 
                         elif direction > 0 and centroid[1] > self.frameHeight // 2:
