@@ -5,7 +5,7 @@ from opencage.geocoder import OpenCageGeocode as geocoder
 
 class Weather():
     def init(self, lat, lon):
-        key = "4cf6fec3a220ac5699c371800f684535"
+        key = ""
         url = "https://api.openweathermap.org/data/2.5/forecast"
         unit = "metric"
         req = "{url}?lat={lat}&lon={lon}&appid={key}&units={unit}".format(url=url, lat=lat, lon=lon, key=key, unit=unit)
